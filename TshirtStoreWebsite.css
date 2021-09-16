@@ -169,6 +169,11 @@ a {
     width: 100%;
     height: 100%;
   }
+
+  .model-img {
+    position: relative;
+    width: 100%;
+  }
   .card-img{
     width: 100%;
     object-fit: cover;
@@ -191,38 +196,34 @@ a {
 
   .card-info{
     width: 80%;
-    margin: 2rem auto 0;
+    margin: 0 auto;
     text-align: center;
   }
 
-  .card{
-    position:relative;
-  }
-
-  .showcase-wrapper .card::before{
+  .showcase-wrapper .card .model-img::before{
     content: '';
     position:absolute;
-    height: 81%;
+    height: 100%;
     width: 100%;
     background-size: cover;
     opacity: 0;
     transition: opacity .5s ease-out;
   }
-  .showcase-wrapper .card:nth-child(4n + 1)::before{
+  .showcase-wrapper .card:nth-child(4n + 1) .model-img::before{
     background-image: url(https://assets-lighthouse.alphacamp.co/uploads/image/file/14372/bastian-ignacio-vega-cani-9UAfLTqMoS0-unsplash__2_.png);
   }
 
-  .showcase-wrapper .card:nth-child(4n + 2)::before{
+  .showcase-wrapper .card:nth-child(4n + 2) .model-img::before{
     background-image: url(https://assets-lighthouse.alphacamp.co/uploads/image/file/14365/anomaly-WWesmHEgXDs-unsplash.jpg);
   }
-  .showcase-wrapper .card:nth-child(4n + 3)::before{
+  .showcase-wrapper .card:nth-child(4n + 3) .model-img::before{
     background-image: url(https://assets-lighthouse.alphacamp.co/uploads/image/file/14374/faith-yarn-hgtWvsq5e2c-unsplash.png);
   }
-  .showcase-wrapper .card:nth-child(4n + 4)::before{
+  .showcase-wrapper .card:nth-child(4n + 4) .model-img::before{
     background-image: url(https://assets-lighthouse.alphacamp.co/uploads/image/file/14373/christian-bolt-VW5VjskNXZ8-unsplash.png);
   }
 
-  .showcase-wrapper .card:hover::before{
+  .showcase-wrapper .card:hover .model-img::before{
     opacity: 1;
   }
 
