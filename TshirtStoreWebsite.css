@@ -1,0 +1,369 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f6f7f8;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-size: 1rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  line-height: 0.9;
+}
+
+p {
+  margin: 0;
+}
+
+ul,
+li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 85%;
+  margin: 0 auto 3rem auto;
+}
+
+/* Main header */
+ header{
+   /* outline: 2px solid orange; */
+   position:fixed;
+   z-index: 999;
+   width: 100%;
+   height: 60px;
+   background: #ffffff;
+   -webkit-box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.1);
+   -moz-box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.1);
+   box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.1);
+   opacity: 0.95;
+ }
+
+ .header-wrapper{
+   display: grid;
+   grid-template-columns:  1fr 350px 1fr;
+   grid-template-rows: auto;
+   align-items: center;
+   justify-items: center;
+   padding-top: 10px;
+ }
+
+ .header-brand{
+    grid-column: 2/3;
+    display: flex;
+    align-items: center;
+    font-size:1.5rem;
+ }
+
+ .brand-logo{
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+ }
+
+ .brand-name{
+   position: relative;
+   font-weight: 700;
+ }
+ 
+ .register{
+  position: absolute;
+  font-size: 1rem;
+ }
+
+ .nav-list{
+   display: none;
+ }
+
+ .item-link{
+   color:black;
+   font-weight: bold;
+ }
+ 
+ .header-icons{ 
+   grid-column: 3/4;
+   justify-self: end;;
+   display: flex;
+   justify-content: center;
+   letter-spacing: 20px;
+ }
+
+#search{
+   position:absolute;
+   top:50%;
+   transform: translateY(-50%);
+   left:1rem;
+ }
+
+.icon-link i{
+   color: gray;
+ }
+
+ /* selection */
+
+ .selection{
+   padding-top: 6rem ;
+   text-align: center;
+ }
+ 
+
+ .selection-title{
+   margin: 1rem 0;
+   font-weight: 700;
+ }
+
+ .selection-inputs{
+   display: flex;
+   flex-flow: row wrap;
+   justify-content: center;
+ }
+ .selection-input{
+   min-width: 15%;
+   height: 3rem;
+   margin:1rem;
+   background-color: white;
+   border: 2px solid gray;
+   border-radius: 5px;
+   font-weight: 700;
+   letter-spacing: 2px;
+   padding-left: 5px;
+ }
+
+ /* Showcase */
+  .showcase-wrapper{
+    display: grid;
+    grid-template-columns: repeat( 2 , 1fr);
+    grid-gap: 1rem;
+    width: 100%;
+  }
+
+  .card{ 
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  .card-img{
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .card-icon {
+    position: absolute;
+    top: 2%;
+    right: 9%;
+    border-radius: 50%;
+    background-color: #fff;
+    height: 2rem;
+    width: 2rem;
+    text-align: center;
+    line-height: 2.4rem;
+  }
+  .card-icon i{
+    font-size:1.2rem;
+  }
+
+  .card-info{
+    width: 80%;
+    margin: 2rem auto 0;
+    text-align: center;
+  }
+
+  .card{
+    position:relative;
+  }
+
+  .showcase-wrapper .card::before{
+    content: '';
+    position:absolute;
+    height: 81%;
+    width: 100%;
+    background-size: cover;
+    opacity: 0;
+    transition: opacity .5s ease-out;
+  }
+  .showcase-wrapper .card:nth-child(4n + 1)::before{
+    background-image: url(https://assets-lighthouse.alphacamp.co/uploads/image/file/14372/bastian-ignacio-vega-cani-9UAfLTqMoS0-unsplash__2_.png);
+  }
+
+  .showcase-wrapper .card:nth-child(4n + 2)::before{
+    background-image: url(https://assets-lighthouse.alphacamp.co/uploads/image/file/14365/anomaly-WWesmHEgXDs-unsplash.jpg);
+  }
+  .showcase-wrapper .card:nth-child(4n + 3)::before{
+    background-image: url(https://assets-lighthouse.alphacamp.co/uploads/image/file/14374/faith-yarn-hgtWvsq5e2c-unsplash.png);
+  }
+  .showcase-wrapper .card:nth-child(4n + 4)::before{
+    background-image: url(https://assets-lighthouse.alphacamp.co/uploads/image/file/14373/christian-bolt-VW5VjskNXZ8-unsplash.png);
+  }
+
+  .showcase-wrapper .card:hover::before{
+    opacity: 1;
+  }
+
+/* Paginator */
+  .paginator{
+    text-align: center;
+    margin: 0.5rem 0;
+  }
+
+/* Footer */
+  footer{
+    width: 100vw;
+    margin: 1rem auto;
+    text-align: center;
+  }
+
+  .footer-banner{
+    width: 100%;
+    height: 250px;
+    margin: 1rem auto;
+    background-image: url(https://assets-lighthouse.alphacamp.co/uploads/image/file/14376/template.png);
+    background-size: 100% 100%;
+    background-position: center;
+    padding-top: 50px;
+  }
+
+  .sign-up{
+    height: 100%;
+    max-width: 66%;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sign-up-item{
+    margin-bottom: 1rem;
+  }
+
+  .sign-up-title{
+    font-weight: 700;
+    font-size: 1.1rem;
+  }
+
+  .sign-up-input{
+    text-align: center;
+  }
+
+  .input{
+    height: 3rem;
+    width: 25rem;
+    vertical-align:middle;
+    border-radius:  25px 0 0 25px ;
+    text-align: center;
+    font-weight: 600;
+    color: gray;
+  }
+
+  .btn{
+    position: relative;
+    left: -1rem;
+    display: inline-block;
+    vertical-align:middle;
+    height: 3rem;
+    width: 5rem;
+    background-color: black;
+    color: white;
+    border-radius: 0 25px 25px 0 ;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+
+  .sign-up-policy{
+    color: black;
+    font-size: 0.8rem;
+  }
+  .sign-up-policy ins{
+    color: black;
+  }
+
+
+@media screen and (min-width:600px){
+
+  .showcase-wrapper{
+    grid-template-columns: repeat( 3 , 1fr);
+  }
+}  
+@media screen and (min-width:960px){
+
+/* Main header */
+  header{
+    width: 100%;
+  }
+
+  .header-wrapper{
+    display: grid;
+    grid-template-columns:  1fr 350px 1fr;
+    grid-template-rows: auto;
+    align-items: center;
+
+  }
+
+  .header-brand{
+      grid-column: 1/2;
+      justify-self: start;
+      display: flex;
+      align-items: center;
+  }
+
+  .nav-list{
+    grid-column: 2/3;
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 5rem;
+    font-size: 1.5rem;
+  }
+
+  .header-icons{
+    grid-column: 3/4;
+    display: flex;
+    justify-content: end;
+    letter-spacing: 30px;
+  }
+
+  #search{
+    all:unset
+  }
+
+/* showcase */
+
+  .showcase-wrapper{
+
+    grid-template-columns: repeat( 4 , 1fr);
+    max-width: 1821px;
+    margin: 0 auto;
+  }
+
+/* Footer */
+    .footer-banner{
+    max-width: 80%;
+    height: 20vw;
+  }
+}
